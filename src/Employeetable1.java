@@ -1,21 +1,18 @@
 
-
 import java.util.*;
 
+public class Employeetable1 {
 
-public class Employeetable1 extends Employeetable{
-
-	 public Employeetable1(String empName, int empId, double empSal) {
-		super(empName, empId, empSal);
-		
-	}
-
-	private String empName;
+	 private String empName;
 	 private int empId;
 	 private double empSal;
 	 Employeetable1 employees[] = new Employeetable1[100];
 	 
-	
+	 public Employeetable1(String name,int id,double sal){
+         this.empName = name;
+         this.empId = id;
+         this.empSal = sal;
+      }
 	 
 	 public String getEmpName(){
 		 return empName;
@@ -43,7 +40,7 @@ public class Employeetable1 extends Employeetable{
 		
 		 for(Map.Entry<Integer, Employeetable1> entry:empMap.entrySet()){    
 		        int employeeId=entry.getKey();  
-		        Employeetable empDetails=entry.getValue();  
+		        Employeetable1 empDetails=entry.getValue();  
 		        System.out.println(employeeId+" Details:");  
 		        System.out.println("Employee Name is " + empDetails.getEmpName() + " id is "+ empDetails.getEmpId() +" and salary is " + empDetails.getSalary());   
 		    }   
